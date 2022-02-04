@@ -11,7 +11,7 @@ public class LL {
         }
     }
 
-    static class Stack {
+    public static class Stack {
         public static Node head = null;
 
         // PUSH
@@ -26,7 +26,7 @@ public class LL {
         }
 
         //POP
-        public static int pop(int data) {
+        public static int pop() {
             if (head == null) {
                 return -1;
             }
@@ -36,22 +36,26 @@ public class LL {
         }
 
         //PEEk
-        public static int peek(int data) {
+        public static int peek() {
             if (head == null) {
                 return -1;
             }
             return head.data;
         }
     }
-    public static void main(String[] args) {
-            Stack s = new Stack();
-            s.push(1);
-            s.push(2);
-            s.push(3);
-            s.push(4);
 
-//            while (s.head == null){
-//                System.out.println(s.peek());
-//                s.pop();
-            }
+    public static void main(String[] args) {
+        Stack s = new Stack();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.push(4);
+
+        while (s.head != null) {
+            System.out.println(s.peek());
+            s.pop();
         }
+    }
+}
+
+
